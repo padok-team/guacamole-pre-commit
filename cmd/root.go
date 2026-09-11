@@ -12,6 +12,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "guacamole-pre-commit [files...]",
 	Short: "Run Guacamole's static checks on staged Terraform/Terragrunt files.",
+	Args:  cobra.ArbitraryArgs,
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) == 0 {
 			fmt.Fprintln(os.Stderr, "guacamole-pre-commit: no files received")
