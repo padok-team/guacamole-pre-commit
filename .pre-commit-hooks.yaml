@@ -1,0 +1,7 @@
+- id: guacamole-pre-commit
+  name: Guacamole static checks
+  description: Run Guacamole's static checks on staged Terraform/Terragrunt files.
+  entry: guacamole-pre-commit
+  language: golang
+  files: \.(tf|hcl)$
+  pass_filenames: true
